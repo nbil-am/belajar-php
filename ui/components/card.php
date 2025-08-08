@@ -1,12 +1,10 @@
 <?php 
-$username = '';
-$email = '';
-$password = '';
-
-if(isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] === "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $email = $_POST["email"];
+if ($username && $email && $password) {
+    // Ensure that the variables are set before including the card
+} else {
+    // Handle the case where the variables are not set
+    echo "User data is not available.";
+    exit;
 }
 ?>
 

@@ -1,5 +1,6 @@
 <?php 
-include("database/connection.php")
+include("database/connection.php");
+include("server/get.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

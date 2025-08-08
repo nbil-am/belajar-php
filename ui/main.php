@@ -1,5 +1,5 @@
 <main class="main">
-    <form action="" method="post" class="form">
+    <form action="server/insert.php" method="post" class="form">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" class="input">
         <label for="email">Email</label>
@@ -10,7 +10,12 @@
     </form>
     <div class="card-container">
         <?php 
+        while ($row = $result->fetch_assoc()) {
+            $username = $row['username'];
+            $email = $row['email'];
+            $password = $row['password'];
             include "components/card.php";
+            } 
         ?>
     </div>
 </main>
