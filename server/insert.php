@@ -2,8 +2,11 @@
 include("../database/connection.php");
 
  if($_SERVER["REQUEST_METHOD" ] == "POST") {
+   if(!isset($_POST["username"]) && !isset($_POST["email"]) && !isset($_POST["password"])) {
+      header("Location:../index.php");
+   }
     $username = $_POST["username"];
-    $password = $_POST["password"];
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $email = $_POST["email"];
     echo $username ."  ". $password ."  ". $email ."  ";
 

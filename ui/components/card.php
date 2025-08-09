@@ -13,4 +13,10 @@ if ($username && $email && $password) {
     <i> username ="<?= $username ?>"</i>
     <i> email ="<?= $email ?>"</i>
     <i> password ="<?= $password ?>"</i>
+    <div>
+        <button class="btn"><a href="/belajar-php/edit.php?email=<?= $email?>">edit</a></button>
+        <button class="btn"><a href="/belajar-php/server/delete.php?email=<?=$email?>">Delete</a></button>
+        <button class="btn"><a href="/belajar-php/server/delete.php?email=<?=$email?>">Delete</a></button>
+
+    </div>
 </div>
